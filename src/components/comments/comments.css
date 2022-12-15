@@ -1,20 +1,26 @@
+.commentsContainer {
+    font-family: Poppins;
+}
+
 .commentChainContainer {
     position: relative;
 }
 
 .collapseChain {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     width: 1px;
     padding: 0 8px 0 8px;
-    /* background-color: rgb(95, 95, 95); */
-    border-radius: 10px;
     cursor: pointer;
 }
 
 .collapseChain div {
     background-color: rgb(95, 95, 95);
     width: 1px;
+    border-radius: 10px;
     height: 100%;
 }
 
@@ -24,6 +30,17 @@
 
 .collapsedCommentChain {
     display: flex;
+    position: relative;
+}
+
+.collapsedCommentChain button {
+    all: unset;
+    position: absolute;
+    margin: auto 0;
+    height: 30px;
+    margin-left: 17px;
+    background-color: rgb(217, 217, 217);
+    width: 2px;
 }
 
 .replyChain {

@@ -14,7 +14,9 @@ const Comment = (props: { user: string; comment: string; upvoot: number; downvoo
                     <AiOutlineArrowUp color={score > baseScore ? "#ff6600" : "#d9d9d9"} />
                 </button>
                 <p style={{ color: score > baseScore ? "#ff6600" : score < baseScore ? "#003ed9" : "#d9d9d9" }}>
-                    {score}
+                    {Math.abs(score) > 999
+                        ? `${score < 0 ? "-" : ""}${String(Math.abs(score))[0]}.${String(Math.abs(score))[1]}k`
+                        : score}
                 </p>
                 <button onClick={() => setScore(score < baseScore ? baseScore : baseScore - 1)}>
                     <AiOutlineArrowDown color={score < baseScore ? "#003ed9" : "#d9d9d9"} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Comment from "./Comment";
 import { CommentType } from "../../types/types";
 
@@ -10,8 +10,8 @@ const CommentChain = (props: { chain: CommentType }) => {
         <div className="commentChainContainer">
             {!isHidden && (
                 <>
-                    <div className="collapseChain" onClick={() => setIsHidden(true)} >
-                        <div/>
+                    <div className="collapseChain" onClick={() => setIsHidden(true)}>
+                        <div />
                     </div>
                     <div className="chainContent">
                         <div>
@@ -36,10 +36,10 @@ const CommentChain = (props: { chain: CommentType }) => {
 
             {isHidden && (
                 <div className="collapsedCommentChain">
-                    <button onClick={() => setIsHidden(false)}></button>
-                    <p>
-                        {chain.user}
-                    </p>
+                    <div className="collapseChain" onClick={() => setIsHidden(false)}>
+                        <div style={{ height: "30px", width: "3px" }} />
+                    </div>
+                    <p className="chainContent">{chain.user}</p>
                 </div>
             )}
         </div>

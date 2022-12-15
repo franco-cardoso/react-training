@@ -1,19 +1,35 @@
+import { useEffect, useState } from "react";
 import { CommentType } from "../../types/types";
-import { randomNum } from "../../utility/utility";
+import { randomNum, sortComments } from "../../utility/utility";
 import CommentChain from "./CommentChain";
 
 const CommentsSection = () => {
-    const data = comments.sort((a, b) => a.upvoot - a.downvoot - (b.upvoot - b.downvoot));
-    data.reverse();
+    const [sorting, setSorting] = useState("top");
 
     return (
-        <div className="commentsContainer">
-            {data.map((item, i) => (
-                <div style={{ marginBottom: "20px" }}>
-                    <CommentChain chain={item} key={i} />
-                </div>
-            ))}
-        </div>
+        <section className="commentsSection">
+            <div>
+                <select
+                    name="selectSort"
+                    id=""
+                    onChange={(e) => {
+                        // location.reload();
+                        setSorting(e.target.value);
+                    }}
+                >
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+            </div>
+
+            <div className="commentsContainer">
+                {sortComments(comments, sorting).map((item, i) => (
+                    <div style={{ marginBottom: "20px" }}>
+                        <CommentChain chain={item} sorting={sorting} key={i} />
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 };
 

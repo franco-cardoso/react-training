@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Comment from "./Comment";
 import { CommentType } from "../../types/types";
+import { sortComments } from "../../utility/utility";
 
-const CommentChain = (props: { chain: CommentType }) => {
-    let { chain } = props;
+const CommentChain = (props: { chain: CommentType; sorting: string }) => {
+    let { chain, sorting } = props;
     const [isHidden, setIsHidden] = useState(false);
 
     return (
@@ -24,9 +25,9 @@ const CommentChain = (props: { chain: CommentType }) => {
                         </div>
 
                         <div className="replyChain">
-                            {chain.replies.map((item, i) => (
+                            {sortComments(chain.replies, sorting).map((item, i) => (
                                 <div>
-                                    <CommentChain chain={item} key={i} />
+                                    <CommentChain chain={item} key={i} sorting={sorting} />
                                 </div>
                             ))}
                         </div>

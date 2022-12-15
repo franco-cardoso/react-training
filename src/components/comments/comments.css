@@ -1,0 +1,62 @@
+.commentChainContainer {
+    position: relative;
+}
+
+.collapseChain {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    padding: 0 8px 0 8px;
+    /* background-color: rgb(95, 95, 95); */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.collapseChain div {
+    background-color: rgb(95, 95, 95);
+    width: 1px;
+    height: 100%;
+}
+
+.collapseChain:hover div {
+    background-color: rgb(217, 217, 217);
+}
+
+.collapsedCommentChain {
+    display: flex;
+}
+
+.replyChain {
+    margin: 0 0 0 20px;
+}
+
+.replyChain div {
+    margin-bottom: 5px;
+}
+
+.chainContent {
+    margin-left: 20px;
+}
+
+.commentContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.commentPoints {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.commentPoints button {
+    all: unset;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.commentPoints p {
+    margin: 0;
+    user-select: none;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CommentType } from "../../types/types";
 import { randomNum, sortComments } from "../../utility/utility";
 import CommentChain from "./CommentChain";
@@ -9,14 +9,7 @@ const CommentsSection = () => {
     return (
         <section className="commentsSection">
             <div>
-                <select
-                    name="selectSort"
-                    id=""
-                    onChange={(e) => {
-                        // location.reload();
-                        setSorting(e.target.value);
-                    }}
-                >
+                <select name="selectSort" id="" onChange={(e) => setSorting(e.target.value)}>
                     <option value="top">Top</option>
                     <option value="bottom">Bottom</option>
                 </select>
@@ -33,8 +26,8 @@ const CommentsSection = () => {
     );
 };
 
-const MAX_UPVOOT = 5000;
-const MIN_UPVOOT = 1000;
+const MAX_UPVOOT = 100;
+const MIN_UPVOOT = 0;
 
 const comments: CommentType[] = [
     {

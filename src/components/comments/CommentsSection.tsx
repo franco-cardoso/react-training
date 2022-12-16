@@ -12,6 +12,7 @@ const CommentsSection = () => {
                 <select name="selectSort" id="" onChange={(e) => setSorting(e.target.value)}>
                     <option value="top">Top</option>
                     <option value="bottom">Bottom</option>
+                    <option value="test">TestValue</option>
                 </select>
             </div>
 
@@ -26,59 +27,59 @@ const CommentsSection = () => {
     );
 };
 
-const MAX_UPVOOT = 100;
-const MIN_UPVOOT = 0;
+const MAX_UPVOOT = 800;
+const MAX_DOWNVOOT = 150;
 
 const comments: CommentType[] = [
     {
         user: "SomeUser",
         comment: "this is a comment",
         upvoot: randomNum(MAX_UPVOOT),
-        downvoot: randomNum(MIN_UPVOOT),
+        downvoot: randomNum(MAX_DOWNVOOT),
         replies: [
             {
                 user: "SomeUser",
                 comment:
                     "this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment this is a comment ",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [
                     {
                         user: "SomeUser",
                         comment: "this is a comment",
                         upvoot: randomNum(MAX_UPVOOT),
-                        downvoot: randomNum(MIN_UPVOOT),
+                        downvoot: randomNum(MAX_DOWNVOOT),
                         replies: [],
                     },
                     {
                         user: "SomeUser",
                         comment: "this is a comment",
                         upvoot: randomNum(MAX_UPVOOT),
-                        downvoot: randomNum(MIN_UPVOOT),
+                        downvoot: randomNum(MAX_DOWNVOOT),
                         replies: [
                             {
                                 user: "SomeUser",
                                 comment: "this is a comment",
                                 upvoot: randomNum(MAX_UPVOOT),
-                                downvoot: randomNum(MIN_UPVOOT),
+                                downvoot: randomNum(MAX_DOWNVOOT),
                                 replies: [
                                     {
                                         user: "SomeUser",
                                         comment: "this is a comment",
                                         upvoot: randomNum(MAX_UPVOOT),
-                                        downvoot: randomNum(MIN_UPVOOT),
+                                        downvoot: randomNum(MAX_DOWNVOOT),
                                         replies: [
                                             {
                                                 user: "SomeUser",
                                                 comment: "this is a comment",
                                                 upvoot: randomNum(MAX_UPVOOT),
-                                                downvoot: randomNum(MIN_UPVOOT),
+                                                downvoot: randomNum(MAX_DOWNVOOT),
                                                 replies: [
                                                     {
                                                         user: "SomeUser",
                                                         comment: "this is a comment",
                                                         upvoot: randomNum(MAX_UPVOOT),
-                                                        downvoot: randomNum(MIN_UPVOOT),
+                                                        downvoot: randomNum(MAX_DOWNVOOT),
                                                         replies: [],
                                                     },
                                                 ],
@@ -93,7 +94,7 @@ const comments: CommentType[] = [
                         user: "SomeUser",
                         comment: "this is a comment",
                         upvoot: randomNum(MAX_UPVOOT),
-                        downvoot: randomNum(MIN_UPVOOT),
+                        downvoot: randomNum(MAX_DOWNVOOT),
                         replies: [],
                     },
                 ],
@@ -102,7 +103,7 @@ const comments: CommentType[] = [
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [],
             },
         ],
@@ -111,26 +112,26 @@ const comments: CommentType[] = [
         user: "SomeUser",
         comment: "this is a comment",
         upvoot: randomNum(MAX_UPVOOT),
-        downvoot: randomNum(MIN_UPVOOT),
+        downvoot: randomNum(MAX_DOWNVOOT),
         replies: [
             {
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [],
             },
             {
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [
                     {
                         user: "SomeUser",
                         comment: "this is a comment",
                         upvoot: randomNum(MAX_UPVOOT),
-                        downvoot: randomNum(MIN_UPVOOT),
+                        downvoot: randomNum(MAX_DOWNVOOT),
                         replies: [],
                     },
                 ],
@@ -141,33 +142,33 @@ const comments: CommentType[] = [
         user: "SomeUser",
         comment: "this is a comment",
         upvoot: randomNum(MAX_UPVOOT),
-        downvoot: randomNum(MIN_UPVOOT),
+        downvoot: randomNum(MAX_DOWNVOOT),
         replies: [],
     },
     {
         user: "SomeUser",
         comment: "this is a comment",
         upvoot: randomNum(MAX_UPVOOT),
-        downvoot: randomNum(MIN_UPVOOT),
+        downvoot: randomNum(MAX_DOWNVOOT),
         replies: [
             {
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [],
             },
             {
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [
                     {
                         user: "SomeUser",
                         comment: "this is a comment",
                         upvoot: randomNum(MAX_UPVOOT),
-                        downvoot: randomNum(MIN_UPVOOT),
+                        downvoot: randomNum(MAX_DOWNVOOT),
                         replies: [],
                     },
                 ],
@@ -178,19 +179,19 @@ const comments: CommentType[] = [
         user: "SomeUser",
         comment: "this is a comment",
         upvoot: randomNum(MAX_UPVOOT),
-        downvoot: randomNum(MIN_UPVOOT),
+        downvoot: randomNum(MAX_DOWNVOOT),
         replies: [
             {
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [
                     {
                         user: "SomeUser",
                         comment: "this is a comment",
                         upvoot: randomNum(MAX_UPVOOT),
-                        downvoot: randomNum(MIN_UPVOOT),
+                        downvoot: randomNum(MAX_DOWNVOOT),
                         replies: [],
                     },
                 ],
@@ -199,7 +200,7 @@ const comments: CommentType[] = [
                 user: "SomeUser",
                 comment: "this is a comment",
                 upvoot: randomNum(MAX_UPVOOT),
-                downvoot: randomNum(MIN_UPVOOT),
+                downvoot: randomNum(MAX_DOWNVOOT),
                 replies: [],
             },
         ],

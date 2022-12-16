@@ -17,7 +17,7 @@ const Voting = ({ upvoot, downvoot }: { upvoot: number; downvoot: number }) => {
                 <AiOutlineArrowUp color={voteState > 0 ? "#ff6600" : "#d9d9d9"} />
             </button>
 
-            <p style={{ color: voteState > 0 ? "#ff6600" : voteState < 0 ? "#003ed9" : "#d9d9d9" }}>
+            <p style={{ color: voteState > 0 ? "#ff6600" : voteState < 0 ? "#3f6ad8" : "#d9d9d9" }}>
                 {formatScore(score)}
             </p>
 

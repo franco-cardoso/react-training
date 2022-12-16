@@ -10,7 +10,6 @@ const formatScore = (score: number): string | number => {
     return Math.abs(score) > 999 ? Math.sign(score)*(+(Math.abs(score)/1000).toFixed(1)) + 'k' : Math.sign(score)*Math.abs(score)
 };
 
-
 const sortComments = (data: CommentType[], sort: string): CommentType[] => {
     const scoreSort = data.sort((a, b) => a.upvoot - a.downvoot - (b.upvoot - b.downvoot));
 

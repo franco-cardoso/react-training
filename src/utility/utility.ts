@@ -6,7 +6,6 @@ const formatScore = (score: number): string | number => {
     // const absolute = Math.abs(score);
     // if (absolute < 1000) return score;
     // return `${score < 0 ? "-" : ""}${String(absolute)[0]}.${String(absolute)[1]}k`;ç
-    console.log((1000).toFixed(2))
     return Math.abs(score) > 999 ? Math.sign(score)*(+(Math.abs(score)/1000).toFixed(1)) + 'k' : Math.sign(score)*Math.abs(score)
 };
 

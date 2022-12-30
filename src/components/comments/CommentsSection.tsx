@@ -4,7 +4,7 @@ import { randomNum, sortComments } from "../../utility/utility";
 import CommentChain from "./CommentChain";
 
 const CommentsSection = () => {
-    const [sorting, setSorting] = useState("top");
+    const [sorting, setSorting] = useState<string>("top");
 
     return (
         <section className="commentsSection">

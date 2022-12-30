@@ -22,9 +22,9 @@ const CommentsSection = () => {
 
             <CommentsContext.Provider value={""}>
                 <div className="commentsContainer">
-                    {sortComments(comments, sorting).map((item, i) => (
-                        <div style={{ marginBottom: "20px" }}>
-                            <CommentChain chain={item} sorting={sorting} key={i} />
+                    {sortComments(comments, sorting).map((item) => (
+                        <div style={{ marginBottom: "20px" }} key={item.id}>
+                            <CommentChain chain={item} sorting={sorting} />
                         </div>
                     ))}
                 </div>

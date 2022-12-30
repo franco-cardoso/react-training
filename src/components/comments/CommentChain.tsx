@@ -25,9 +25,9 @@ const CommentChain = (props: { chain: CommentType; sorting: string }) => {
                         </div>
 
                         <div className="replyChain">
-                            {sortComments(chain.replies, sorting).map((item, i) => (
-                                <div>
-                                    <CommentChain chain={item} key={i} sorting={sorting} />
+                            {sortComments(chain.replies, sorting).map((item) => (
+                                <div key={item.id} >
+                                    <CommentChain chain={item} sorting={sorting} />
                                 </div>
                             ))}
                         </div>

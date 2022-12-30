@@ -1,6 +1,9 @@
-
 .commentChainContainer {
     position: relative;
+}
+
+.commentsSection {
+    margin: 0 8rem;
 }
 
 .collapseChain {
@@ -50,11 +53,20 @@
 
 .chainContent {
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .commentContainer {
     display: flex;
     gap: 10px;
+}
+
+.commentContainer h3 {
+    margin: 5px 0;
+}
+.commentContainer p {
+    margin: 0;
+    font-size: 18px;
 }
 
 .commentPoints {

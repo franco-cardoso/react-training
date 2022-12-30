@@ -10,6 +10,7 @@ const formatScore = (score: number): string | number => {
 };
 
 const sortComments = (data: CommentType[], sort: string): CommentType[] => {
+    if (!data) return;
     const scoreSort = data.sort((a, b) => a.upvoot - a.downvoot - (b.upvoot - b.downvoot));
 
     switch (sort) {

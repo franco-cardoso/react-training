@@ -18,7 +18,7 @@ html, body {
     border-radius: 20px;
     background-color: rgb(28, 29, 35);
     padding: 2rem;
-    box-shadow: 5px 5px 20px 20px rgba(0, 0, 0, 0.548);
+    box-shadow: 15px 15px 20px 20px rgba(0, 0, 0, 0.548);
 }
 
 .componentTitle {

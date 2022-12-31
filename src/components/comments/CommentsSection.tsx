@@ -2,25 +2,16 @@ import { createContext, useEffect, useState } from "react";
 import { CommentType } from "../../types/types";
 import { sortComments } from "../../utility/utility";
 import CommentChain from "./CommentChain";
-const CommentsContext = createContext("");
+export const CommentsContext = createContext(null);
 
 const CommentsSection = () => {
     // const [sorting, setSorting] = useState<string>("top");
-    const [comments, setcomments] = useState<CommentType[]>(db);
+    const [comments, setComments] = useState<CommentType[]>(db);
     const sorting = "top";
 
     return (
         <section className="commentsSection">
-            {/* <div>
-                <select name="selectSort" id="" onChange={(e) => setSorting(e.target.value)}>
-                    <option value="top">Top</option>
-                    <option value="bottom">Bottom</option>
-                    <option value="test">TestValue</option>
-                </select>
-            </div> */}
-            <button onClick={() => setcomments(addReply(comments, commentToAdd, 2))}>test</button>
-
-            <CommentsContext.Provider value={""}>
+            <CommentsContext.Provider value={{db:comments,setComments: setComments}}>
                 <div className="commentsContainer">
                     {sortComments(comments, sorting).map((item) => (
                         <div style={{ marginBottom: "20px" }} key={item.id}>

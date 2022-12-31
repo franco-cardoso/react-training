@@ -9,7 +9,7 @@ const Comment = (props: { id: number; user: string; comment: string; upvoot: num
         <div className="commentContainer">
             <Voting upvoot={upvoot} downvoot={downvoot} />
             <div>
-                <h3 style={{color: user === 'NewUser' ? '#9da6d4' : ''}} >{user}</h3>
+                <h3 style={{ color: user === "NewUser" ? "#9da6d4" : "" }}>{user}</h3>
                 <p>{comment}</p>
                 <CommentButtons id={id} />
             </div>

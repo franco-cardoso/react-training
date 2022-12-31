@@ -85,6 +85,8 @@
 .commentPoints p {
     margin: 0;
     user-select: none;
+    width: 30px;
+    text-align: center;
 }
 
 .commentButtonsContainer ul {
@@ -113,7 +115,7 @@
     outline: 1px solid rgb(96, 96, 99);
     transition: 200ms;
     overflow: hidden;
-    min-width: 450px;
+    min-width: 600px;
 }
 
 .replyContainer:focus-within {

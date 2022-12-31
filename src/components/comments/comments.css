@@ -123,7 +123,7 @@
 }
 
 .replyContainer textarea {
-    border-radius: 10px;
+    /* border-radius: 10px; */
     resize: vertical;
     border: none;
     color: white;

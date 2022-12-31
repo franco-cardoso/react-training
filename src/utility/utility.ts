@@ -6,7 +6,9 @@ const formatScore = (score: number): string | number => {
     // const absolute = Math.abs(score);
     // if (absolute < 1000) return score;
     // return `${score < 0 ? "-" : ""}${String(absolute)[0]}.${String(absolute)[1]}k`;ç
-    return Math.abs(score) > 999 ? Math.sign(score)*(+(Math.abs(score)/1000).toFixed(1)) + 'k' : Math.sign(score)*Math.abs(score)
+    return Math.abs(score) > 999
+        ? Math.sign(score) * +(Math.abs(score) / 1000).toFixed(1) + "k"
+        : Math.sign(score) * Math.abs(score);
 };
 
 const sortComments = (data: CommentType[], sort: string): CommentType[] => {
@@ -18,6 +20,8 @@ const sortComments = (data: CommentType[], sort: string): CommentType[] => {
             return scoreSort.reverse();
         case "bottom":
             return scoreSort;
+        case "new":
+            return data.sort((a, b) => a.date - b.date).reverse();
         default:
             return [];
     }

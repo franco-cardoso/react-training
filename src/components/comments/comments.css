@@ -113,6 +113,7 @@
     outline: 1px solid rgb(96, 96, 99);
     transition: 200ms;
     overflow: hidden;
+    min-width: 450px;
 }
 
 .replyContainer:focus-within {

@@ -15,6 +15,7 @@ const ReplyInput = (props: { id: number; setIsReply: Function }) => {
                     type="button"
                     value="Reply"
                     onClick={() => {
+                        if (!data) return;
                         db.setComments(addReply(db.db, { ...commentToAdd, comment: data }, props.id));
                         props.setIsReply(false);
                     }}

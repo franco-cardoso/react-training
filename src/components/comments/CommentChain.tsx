@@ -18,10 +18,7 @@ const CommentChain = (props: { chain: CommentType; sorting: string }) => {
                         <div>
                             <Comment
                                 id={chain.id}
-                                user={chain.user}
-                                comment={chain.comment}
-                                upvoot={chain.upvoot}
-                                downvoot={chain.downvoot}
+                                data={chain}
                             />
                         </div>
 

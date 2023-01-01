@@ -1,9 +1,10 @@
+import { CommentType } from "../../types/types";
 import CommentButtons from "./CommentButtons";
 import "./comments.css";
 import Voting from "./Voting";
 
-const Comment = (props: { id: number; user: string; comment: string; upvoot: number; downvoot: number }) => {
-    const { id, user, comment, upvoot, downvoot } = props;
+const Comment = (props: { id: number; data: CommentType}) => {
+    const { id, user, comment, upvoot, downvoot } = props.data;
 
     return (
         <div className="commentContainer">

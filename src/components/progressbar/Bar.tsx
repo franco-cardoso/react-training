@@ -1,11 +1,11 @@
-import React from 'react'
+const Bar = (props: { isLoading: boolean }) => {
+    const { isLoading } = props;
 
-const Bar = () => {
-  return (
-    <div className='bar-container'>
-        <div className='bar'></div>
-    </div>
-  )
-}
+    return (
+        <div className="bar-container">
+            <div className="bar"></div>
+        </div>
+    );
+};
 
-export default Bar
+export default Bar;

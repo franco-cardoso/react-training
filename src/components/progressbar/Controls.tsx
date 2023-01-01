@@ -1,9 +1,19 @@
-import React from 'react'
+type PropTypes = {
+    setIsLoading: Function;
+    progress: number;
+    setProgress: Function;
+};
 
-const Controls = () => {
-  return (
-    <div>Controls</div>
-  )
-}
+const Controls = (props: PropTypes) => {
+    return (
+        <div>
+            <ul>
+                <button>Start</button>
+                <button>Stop</button>
+                <button>Reset</button>
+            </ul>
+        </div>
+    );
+};
 
-export default Controls
+export default Controls;

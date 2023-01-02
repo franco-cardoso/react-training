@@ -14,7 +14,6 @@ const ProgressBar = () => {
             clearInterval(interval.current);
             interval.current = null;
         }
-        // return () => clearInterval(interval.current);
     }, [progress]);
 
     useEffect(() => {
@@ -26,21 +25,6 @@ const ProgressBar = () => {
             interval.current = null;
         }
     }, [isLoading]);
-
-    // console.log(isLoading);
-
-    // const loading = setInterval(() => {
-    //     if (!isLoading) return;
-    //     if (progress >= 1) return setProgress(1);
-    //     setProgress(progress + (0.1 + Math.random() * 0.6));
-    //     console.log("loading");
-    // }, 5000);
-    // useEffect(() => {
-    //     if (progress >= 1) {
-    //         setIsLoading(false);
-    //         clearInterval(loading);
-    //     }
-    // }, [isLoading]);
 
     return (
         <div>

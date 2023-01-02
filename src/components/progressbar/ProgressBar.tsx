@@ -18,7 +18,7 @@ const ProgressBar = () => {
 
     useEffect(() => {
         if (isLoading) {
-            interval.current = setInterval(() => setProgress((prev) => prev + 0.001), 1);
+            interval.current = setInterval(() => setProgress((prev) => prev + 0.0006), 1);
             // interval.current = setInterval(() => setProgress((prev) => prev + (0.1 + Math.random() * 0.6)), 1000);
         } else if (!isLoading) {
             clearInterval(interval.current);

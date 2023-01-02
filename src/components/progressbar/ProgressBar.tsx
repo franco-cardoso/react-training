@@ -7,7 +7,6 @@ const ProgressBar = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [progress, setProgress] = useState<number>(0);
     const interval = useRef(null);
-    console.log(progress);
 
     useEffect(() => {
         if (progress >= 1) {
@@ -20,8 +19,8 @@ const ProgressBar = () => {
 
     useEffect(() => {
         if (isLoading) {
-            // interval.current = setInterval(() => setProgress((prev) => prev + 0.01), 100);
-            interval.current = setInterval(() => setProgress((prev) => prev + (0.1 + Math.random() * 0.6)), 2000);
+            interval.current = setInterval(() => setProgress((prev) => prev + 0.001), 1);
+            // interval.current = setInterval(() => setProgress((prev) => prev + (0.1 + Math.random() * 0.6)), 1000);
         } else if (!isLoading) {
             clearInterval(interval.current);
             interval.current = null;

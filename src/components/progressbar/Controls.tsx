@@ -13,7 +13,7 @@ const Controls = (props: PropTypes) => {
                 <button
                     onClick={() => {
                         // setProgress(0.1 + Math.random() * 0.6);
-                        if (progress === 0) setProgress(0.001);
+                        // if (progress === 0) setProgress(0);
                         setIsLoading(true);
                     }}
                 >

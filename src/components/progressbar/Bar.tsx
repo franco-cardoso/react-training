@@ -13,12 +13,15 @@ const Bar = (props: { progress: number }) => {
     return (
         <div className="bar-container">
             <motion.div
+                // style={{ width: "100%" }}
+                // style={{width:'100px'}}
                 className="bar"
-                ref={barRef}
-                initial={{ visibility: "hidden" }}
-                animate={{ visibility: progress === 0 ? "hidden" : "visible", width: width * progress }}
-                transition={{ duration: progress === 0.001 ? 0 : 1, type: "tween" }}
+                // ref={barRef}
+                initial={{ width: 0 }}
+                animate={{ width: width * progress }}
+                transition={{ duration: 0.001, type: "tween" }}
             ></motion.div>
+            <div style={{ width: "100%" }} ref={barRef}></div>
         </div>
     );
 };

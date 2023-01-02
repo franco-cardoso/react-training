@@ -12,14 +12,22 @@ const Controls = (props: PropTypes) => {
             <ul>
                 <button
                     onClick={() => {
-                        setProgress(0.001);
+                        // setProgress(0.1 + Math.random() * 0.6);
+                        if (progress === 0) setProgress(0.001);
                         setIsLoading(true);
                     }}
                 >
                     Start
                 </button>
                 <button onClick={() => setIsLoading(false)}>Stop</button>
-                <button>Reset</button>
+                <button
+                    onClick={() => {
+                        setIsLoading(false);
+                        setProgress(0);
+                    }}
+                >
+                    Reset
+                </button>
             </ul>
         </div>
     );

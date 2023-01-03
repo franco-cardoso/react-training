@@ -7,7 +7,7 @@ const Rating = () => {
     const [permCurrent, setPermCurrent] = useState<number>(-1);
     const [ratingActive, setRatingActive] = useState(false);
     let stars: ReactComponentElement<typeof Star>[] = [];
-    let varToCompare = ratingActive ? current : permCurrent
+    let varToCompare = ratingActive ? current : permCurrent;
 
     for (let i = 0; i < 5; i++) {
         stars.push(
@@ -15,6 +15,7 @@ const Rating = () => {
                 key={i}
                 active={varToCompare >= i ? true : false}
                 ID={i}
+                permCurrent={permCurrent}
                 setCurrent={setCurrent}
                 setPermCurrent={setPermCurrent}
             ></Star>

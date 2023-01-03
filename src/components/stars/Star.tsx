@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-const Star = ({ active, ID, setCurrent, setPermCurrent }) => {
+const Star = ({ permCurrent, active, ID, setCurrent, setPermCurrent }) => {
     return (
         <div
             style={{
@@ -14,7 +14,7 @@ const Star = ({ active, ID, setCurrent, setPermCurrent }) => {
             <span
                 style={{ padding: "5px", margin: "0", width: "35px" }}
                 onMouseEnter={() => setCurrent(ID)}
-                onMouseLeave={() => setCurrent(-1)}
+                onMouseLeave={() => setCurrent(permCurrent)}
                 onClick={() => setPermCurrent(ID)}
             >
                 {active && (

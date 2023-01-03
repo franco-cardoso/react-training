@@ -27,7 +27,8 @@ const ProgressBar = () => {
     }, [isLoading]);
 
     return (
-        <div>
+        <div className="main-container">
+            <h2>{(progress * 100).toFixed(0)}%</h2>
             <Bar progress={progress} />
             <Controls progress={progress} setProgress={setProgress} setIsLoading={setIsLoading} />
         </div>

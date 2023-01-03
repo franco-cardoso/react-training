@@ -1,0 +1,8 @@
+.ratingCont {
+    display: flex;
+    height: 50px;
+}
+
+.starCont {
+    height: 30px;
+}

@@ -1,0 +1,44 @@
+.gameCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 5px;
+    width: 130px;
+    height: 40px;
+    background: none;
+    color: #f9f9f9;
+    font-size: 16px;
+    font-family: Poppins;
+    border: #f9f9f9 solid 0.5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.btn:hover {
+    background-color: #4e4e4e;
+}
+
+.gridCont {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.squareCont {
+    padding: 20px;
+    border: white solid 1px;
+    border-radius: 1px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-size: 24px;
+    font-weight: bold;
+}

@@ -2,6 +2,7 @@ const Square = ({ id, gameState, setGameState, next, setNext, winner }) => {
     return (
         <div
             className="squareCont"
+            style={{ cursor: gameState[id] ? "" : "pointer" }}
             onClick={() => {
                 if (winner) return;
                 if (gameState[id]) return;
@@ -11,9 +12,7 @@ const Square = ({ id, gameState, setGameState, next, setNext, winner }) => {
                 setNext(next > 0 ? -1 : 1);
             }}
         >
-            <p style={{ pointerEvents: "none" }}>
-                {gameState[id] === 0 ? "" : gameState[id] > 0 ? "X" : "O"}
-            </p>
+            <p style={{ pointerEvents: "none" }}>{gameState[id] === 0 ? "" : gameState[id] > 0 ? "X" : "O"}</p>
         </div>
     );
 };

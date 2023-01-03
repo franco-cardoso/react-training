@@ -1,3 +1,5 @@
+import Button from "../../utility/Button";
+
 type PropTypes = {
     setIsLoading: Function;
     progress: number;
@@ -8,9 +10,9 @@ const Controls = (props: PropTypes) => {
     const { setIsLoading, progress, setProgress } = props;
 
     return (
-        <div>
+        <div className="controls-container">
             <ul>
-                <button
+                <Button
                     onClick={() => {
                         // setProgress(0.1 + Math.random() * 0.6);
                         // if (progress === 0) setProgress(0);
@@ -18,16 +20,16 @@ const Controls = (props: PropTypes) => {
                     }}
                 >
                     Start
-                </button>
-                <button onClick={() => setIsLoading(false)}>Stop</button>
-                <button
+                </Button>
+                <Button onClick={() => setIsLoading(false)}>Stop</Button>
+                <Button
                     onClick={() => {
                         setIsLoading(false);
                         setProgress(0);
                     }}
                 >
                     Reset
-                </button>
+                </Button>
             </ul>
         </div>
     );

@@ -1,6 +1,7 @@
 import { ReactComponentElement, useEffect, useState } from "react";
 import Square from "./Square";
 import "./game.css";
+import Button from "../../utility/Button";
 
 const Game = () => {
     const checkGame = () => {
@@ -41,8 +42,7 @@ const Game = () => {
             </div>
             <div className="gridCont">{squares}</div>
             <div className="controls">
-                <button
-                    className="btn"
+                <Button
                     onClick={() => {
                         setGameState(gameArr);
                         setNext(1);
@@ -50,7 +50,7 @@ const Game = () => {
                     }}
                 >
                     Restart
-                </button>
+                </Button>
             </div>
         </div>
     );

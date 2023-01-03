@@ -21,7 +21,13 @@ const Controls = (props: PropTypes) => {
                 >
                     Start
                 </Button>
-                <Button onClick={() => setIsLoading(false)}>Stop</Button>
+                <Button
+                    onClick={() => {
+                        setIsLoading(false);
+                    }}
+                >
+                    Stop
+                </Button>
                 <Button
                     onClick={() => {
                         setIsLoading(false);

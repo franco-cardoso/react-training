@@ -5,7 +5,7 @@ body {
     height: 100%;
     box-sizing: border-box;
     color: #d9d9d9;
-    background-color: #090b18;
+    background-color: #050711;
     /* background: linear-gradient(66deg, rgba(10,12,20,1) 0%, rgba(53,51,117,1) 100%); */
     font-family: Poppins;
 }
@@ -15,7 +15,7 @@ body {
 }
 
 .componentDiv {
-    border: solid #d9d9d9b7 0.4px;
+    border: solid #a0a0a0b7 0.4px;
     border-radius: 20px;
     background-color: rgb(28, 29, 35);
     padding: 2rem;
